@@ -1,106 +1,102 @@
-# Next.js Task Manager
+# Task Management Application 🚀
 
-A modern task management application built with Next.js 14, MongoDB, and Server Actions.
+A simple Task Management application built with **Next.js** and **MongoDB** that allows users to **create**, **read**, **update**, and **delete** tasks. It also provides features like marking tasks as **complete** or **incomplete**, with data persistence using MongoDB.
 
-## 🌟 Live Demo
+Deployed at: [Task Management App](https://task-management-yardstick.vercel.app/)
 
-[View Demo](your-vercel-url) • [Explore Code](your-github-repo)
+## Table of Contents 📑
 
-## ✨ Features
+- [Features ✨](#features-)
+- [Technologies Used 💻](#technologies-used-)
+- [Installation Guide 🛠️](#installation-guide-)
+- [API Endpoints 📡](#api-endpoints-)
+  - [Create Task](#create-task-post-apitask)
+  - [Get All Tasks](#get-all-tasks-get-apitasks)
+  - [Update Task](#update-task-put-apitaskid)
+  - [Delete Task](#delete-task-delete-apitaskid)
+- [How to use the endpoints 🛠️](#how-to-use-the-endpoints-)
+- [Deployment 🚀](#deployment-)
+- [License 📜](#license-)
 
-- 📝 Create, edit, and delete tasks
-- ✅ Mark tasks as complete/incomplete
-- 📅 Set due dates for tasks
-- 🔄 Real-time updates
-- 📱 Responsive design
-- 🎨 Modern UI with Tailwind CSS
+---
 
-## 🛠️ Built With
+## Features ✨
 
-- [Next.js 14](https://nextjs.org/)
-- [MongoDB](https://www.mongodb.com/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [React Toastify](https://fkhadra.github.io/react-toastify/)
-- [Lucide Icons](https://lucide.dev/)
-- [date-fns](https://date-fns.org/)
+- **Create Task**: Add a new task with title, description, and due date.
+- **View Tasks**: Display a list of all tasks.
+- **Update Task**: Modify an existing task.
+- **Delete Task**: Remove a task from the database.
+- **Complete/Incomplete Task**: Mark tasks as completed or pending.
+- **Data Persistence**: Tasks are stored and fetched from a **MongoDB** database.
+- **Error Handling**: Built-in error handling and loading states.
 
-## 🚀 Getting Started
+---
 
-### Prerequisites
+## Technologies Used 💻
 
-- Node.js 18+ 
-- MongoDB database
-- npm or yarn
+- **Frontend**: 
+  - [Next.js](https://nextjs.org/)
+  - React.js for rendering tasks and handling UI interactions.
+  
+- **Backend**: 
+  - [Next.js API Routes](https://nextjs.org/docs/api-routes/introduction) to handle CRUD operations for tasks.
 
-### Installation
+- **Database**: 
+  - [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) for cloud-based NoSQL data storage.
 
-1. Clone the repo
-   ```sh
-   git clone https://github.com/your-username/next-task-manager.git
-   ```
+- **Deployment**:
+  - [Vercel](https://vercel.com/) for continuous deployment and serverless hosting.
 
-2. Install NPM packages
-   ```sh
-   npm install
-   ```
+---
 
-3. Create `.env.local` file
-   ```env
-   MONGODB_URI=your_mongodb_connection_string
-   ```
+## Installation Guide 🛠️
 
-4. Run development server
-   ```sh
-   npm run dev
-   ```
+1. Clone the repository to your local machine:
+   ```bash
+   git clone https://github.com/yourusername/task-management-app.git
+🎯 Usage
 
-5. Open [http://localhost:3000](http://localhost:3000)
+## Create Task:
 
-## 📸 Screenshots
+Click "Add Task" button
+Fill in title, description, and due date
+Click "Save"
 
-![Dashboard](screenshot-url-1)
-![Add Task](screenshot-url-2)
-![Task List](screenshot-url-3)
 
-## 🎯 Usage
+## Edit Task:
 
-1. **Create Task:**
-   - Click "Add Task" button
-   - Fill in title, description, and due date
-   - Click "Save"
+Click edit icon on task
+Modify details
+Click "Update"
 
-2. **Edit Task:**
-   - Click edit icon on task
-   - Modify details
-   - Click "Update"
 
-3. **Complete Task:**
-   - Click checkmark icon
-   - Task will be marked complete
+## Complete Task:
 
-4. **Delete Task:**
-   - Click trash icon
-   - Confirm deletion
+Click checkmark icon
+Task will be marked complete
+
+
+## Delete Task:
+
+Click trash icon
+Confirm deletion
+
+
 
 ## 🚀 Deployment
 
-1. Push to GitHub
-2. Connect to Vercel
-3. Set environment variables
-4. Deploy!
+Push to GitHub
+Connect to Vercel
+Set environment variables
+Deploy!
 
 ## 📝 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-## 📬 Contact
-
-Your Name - [@your_twitter](https://twitter.com/your_twitter)
-
-Project Link: [https://github.com/your-username/next-task-manager](https://github.com/your-username/next-task-manager)
-
+Distributed under the MIT License. See LICENSE for more information.
+📬 Contact
+Your Name - Sangamesh
+Project Link:https://github.com/sangamesh-Lingshetty/Task-Management-_Yardstick
 ## 🙏 Acknowledgments
 
-- [Next.js Documentation](https://nextjs.org/docs)
-- [Tailwind CSS](https://tailwindcss.com)
-- [MongoDB Documentation](https://docs.mongodb.com)
+Next.js Documentation
+Tailwind CSS
+MongoDB Documentation
