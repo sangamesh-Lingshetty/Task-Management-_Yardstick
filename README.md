@@ -43,6 +43,24 @@ The **Task Management App** is a simple, user-friendly application for managing 
 
 ---
 
+## How to use the end points 🛠️
+
+- **Frontend**: 
+  - [Next.js](https://nextjs.org/)
+  - React.js for rendering tasks and handling UI interactions.
+  
+- **Backend**: 
+  - [Next.js API Routes](https://nextjs.org/docs/api-routes/introduction)
+  - API routes handle CRUD operations for tasks.
+
+- **Database**: 
+  - [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) for cloud-based NoSQL data storage.
+
+- **Deployment**:
+  - [Vercel](https://vercel.com/) for continuous deployment and serverless hosting.
+
+---
+
 ## Setup Instructions ⚙️
 
 ### Prerequisites 📝
