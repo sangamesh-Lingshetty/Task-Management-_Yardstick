@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState,useCallback } from "react";
 import { Check, Trash2, Edit3, Save, Plus } from "lucide-react";
 import { format } from "date-fns";
 import { ToastContainer, toast } from "react-toastify";
@@ -33,17 +33,9 @@ const TaskManagerPage = () => {
   const simulateDelay = () =>
     new Promise((resolve) => setTimeout(resolve, 3000));
 
-  useEffect(() => {
-    fetchTasks();
-    return () => {
-      toast.dismiss();
-    };
-  }, []);
-
-  async function fetchTasks() {
+  const fetchTasks = useCallback(async () => {
     setLoadingStates((prev) => ({ ...prev, fetch: true }));
     try {
-      await simulateDelay();
       const res = await fetch("/api/tasks");
       const data = await res.json();
       setTasks(data);
@@ -53,7 +45,14 @@ const TaskManagerPage = () => {
     } finally {
       setLoadingStates((prev) => ({ ...prev, fetch: false }));
     }
-  }
+  }, []);
+
+  useEffect(() => {
+    fetchTasks();
+    return () => {
+      toast.dismiss();
+    };
+  }, [fetchTasks]);
 
   async function addTask() {
     if (!title.trim() && !description.trim()) {
@@ -80,7 +79,7 @@ const TaskManagerPage = () => {
       setDueDate("");
       await fetchTasks();
     } catch (error) {
-      toast.error("Failed to add task");
+      toast.error("Failed to add task",error);
     } finally {
       setLoadingStates((prev) => ({ ...prev, add: false }));
     }
