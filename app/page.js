@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState,useCallback } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { Check, Trash2, Edit3, Save, Plus } from "lucide-react";
 import { format } from "date-fns";
 import { ToastContainer, toast } from "react-toastify";
@@ -79,7 +79,8 @@ const TaskManagerPage = () => {
       setDueDate("");
       await fetchTasks();
     } catch (error) {
-      toast.error("Failed to add task",error);
+      console.error("Failed to update task:", error);
+      toast.error(`Failed to add task: ${error.message}`, toastConfig);
     } finally {
       setLoadingStates((prev) => ({ ...prev, add: false }));
     }
